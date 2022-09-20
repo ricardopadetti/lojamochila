@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(238, 237, 237);
+}
+
+header {
+    padding: 16px 0;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    margin-bottom: 32px;
+}
+
+.container  {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    display: inline;
+    margin-left: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.sobre-a-loja {
+    margin-bottom: 56px;
+}
+
+h2 {
+    padding-bottom: 4px;
+    border-bottom: 1px solid black;
+    margin-bottom: 32px;
+}
+
+.sobre-a-loja > div{
+    display: flex;
+}
+
+.sobre-a-loja img {
+    max-height: 640px;
+    max-width: 320px;
+    object-fit: cover;
+}
+
+.sobre {
+    margin-left: 16px;
+}
+
+p,
+h3 {
+    margin-bottom: 4px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.produto {
+    margin-bottom: 16px;
+}
+
+.produto img {
+    max-width: 100%;
+}
+
+.produto button {
+    padding: 8px;
+    border: none;
+    margin-top: 8px;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+@media screen and (max-width: 666px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .sobre-a-loja > div{
+        display: block;
+    }
+
+    .sobre-a-loja img {
+        margin-bottom: 16px;
+        width: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .sobre-a-loja h2 {
+        margin-bottom: 8px;
+    }
+
+    .sobre {
+        margin-left: 0;
+    }
+
+    .produtos {
+        display: block;
+    }
+
+    .produtos img {
+        width: 100%;
+    }
+}
+
+@media  screen and (min-width: 667px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 49.5%);
+        column-gap: 1%;
+        row-gap: 5%;
+    }
+
+    .produto img {
+        width: 100%;
+    }
+}
